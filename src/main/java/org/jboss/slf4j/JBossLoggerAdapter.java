@@ -23,6 +23,7 @@ package org.jboss.slf4j;
 
 import org.slf4j.Logger;
 import org.slf4j.Marker;
+import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;
 import org.slf4j.spi.LocationAwareLogger;
@@ -70,8 +71,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isTraceEnabled())
       {
-         String msgStr = MessageFormatter.format(format, arg);
-         logger.trace(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.format(format, arg);
+         logger.trace(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -79,8 +80,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isTraceEnabled())
       {
-         String msgStr = MessageFormatter.format(format, arg1, arg2);
-         logger.trace(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.format(format, arg1, arg2);
+         logger.trace(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
   
@@ -88,8 +89,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isTraceEnabled())
       {
-         String msgStr = MessageFormatter.arrayFormat(format, argArray);
-         logger.trace(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, argArray);
+         logger.trace(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -112,8 +113,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isDebugEnabled())
       {
-         String msgStr = MessageFormatter.format(format, arg);
-         logger.debug(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.format(format, arg);
+         logger.debug(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -121,8 +122,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isDebugEnabled())
       {
-         String msgStr = MessageFormatter.format(format, arg1, arg2);
-         logger.debug(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.format(format, arg1, arg2);
+         logger.debug(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
   
@@ -130,8 +131,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isDebugEnabled())
       {
-         String msgStr = MessageFormatter.arrayFormat(format, argArray);
-         logger.debug(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, argArray);
+         logger.debug(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -154,8 +155,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isInfoEnabled())
       {
-         String msgStr = MessageFormatter.format(format, arg);
-         logger.info(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.format(format, arg);
+         logger.info(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -163,8 +164,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isInfoEnabled())
       {
-         String msgStr = MessageFormatter.format(format, arg1, arg2);
-         logger.info(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.format(format, arg1, arg2);
+         logger.info(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -172,8 +173,8 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
    {
       if (logger.isInfoEnabled())
       {
-         String msgStr = MessageFormatter.arrayFormat(format, argArray);
-         logger.info(LOGGER_FQCN, msgStr, null);
+         FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, argArray);
+         logger.info(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
       }
    }
 
@@ -195,20 +196,20 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
 
    public void warn(String format, Object arg)
    {
-      String msgStr = MessageFormatter.format(format, arg);
-      logger.warn(LOGGER_FQCN, msgStr, null);
+      FormattingTuple formattingTuple = MessageFormatter.format(format, arg);
+      logger.warn(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
    }
 
    public void warn(String format, Object arg1, Object arg2)
    {
-      String msgStr = MessageFormatter.format(format, arg1, arg2);
-      logger.warn(LOGGER_FQCN, msgStr, null);
+      FormattingTuple formattingTuple = MessageFormatter.format(format, arg1, arg2);
+      logger.warn(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
    }
 
    public void warn(String format, Object[] argArray)
    {
-      String msgStr = MessageFormatter.arrayFormat(format, argArray);
-      logger.warn(LOGGER_FQCN, msgStr, null);
+      FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, argArray);
+      logger.warn(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
    }
 
    public void warn(String msg, Throwable t)
@@ -229,20 +230,20 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
 
    public void error(String format, Object arg)
    {
-      String msgStr = MessageFormatter.format(format, arg);
-      logger.error(LOGGER_FQCN, msgStr, null);
+      FormattingTuple formattingTuple = MessageFormatter.format(format, arg);
+      logger.error(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
    }
 
    public void error(String format, Object arg1, Object arg2)
    {
-      String msgStr = MessageFormatter.format(format, arg1, arg2);
-      logger.error(LOGGER_FQCN, msgStr, null);
+      FormattingTuple formattingTuple = MessageFormatter.format(format, arg1, arg2);
+      logger.error(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
    }
 
    public void error(String format, Object[] argArray)
    {
-      String msgStr = MessageFormatter.arrayFormat(format, argArray);
-      logger.error(LOGGER_FQCN, msgStr, null);
+      FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, argArray);
+      logger.error(LOGGER_FQCN, formattingTuple.getMessage(), formattingTuple.getThrowable());
    }
 
    public void error(String msg, Throwable t)
@@ -274,6 +275,36 @@ public final class JBossLoggerAdapter extends MarkerIgnoringBase
             logger.error(callerFQCN, msg, t);
             break;
             
+         default:
+            throw new IllegalStateException("Level number " + level + " is not recognized.");
+      }
+   }
+
+   public void log(Marker marker, String callerFQCN, int level, String msg, Object[] argArray, Throwable t)
+   {
+      String formattedMessage = MessageFormatter.arrayFormat(msg, argArray).getMessage();
+      switch(level)
+      {
+         case LocationAwareLogger.TRACE_INT:
+            logger.trace(callerFQCN, formattedMessage, t);
+            break;
+
+         case LocationAwareLogger.DEBUG_INT:
+            logger.debug(callerFQCN, formattedMessage, t);
+            break;
+
+         case LocationAwareLogger.INFO_INT:
+            logger.info(callerFQCN, formattedMessage, t);
+            break;
+
+         case LocationAwareLogger.WARN_INT:
+            logger.warn(callerFQCN, formattedMessage, t);
+            break;
+
+         case LocationAwareLogger.ERROR_INT:
+            logger.error(callerFQCN, formattedMessage, t);
+            break;
+
          default:
             throw new IllegalStateException("Level number " + level + " is not recognized.");
       }
