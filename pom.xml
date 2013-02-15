@@ -5,13 +5,13 @@
     <version>3</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.jboss.slf4j</groupId>
-  <artifactId>slf4j-jboss-logging</artifactId>
-  <version>1.0.2.GA</version>
+  <groupId>org.dapacode.slf4jjbosslogging</groupId>
+  <artifactId>slf4j-jboss-logging-redux</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>slf4j to JBoss Logging Adapter</name>
+  <name>SLF4J to JBoss Logging Adapter - Redux</name>
   <url>http://www.jboss.org</url>
-  <description>slf4j to JBoss Logging Adapter</description>
+  <description>SLF4J to JBoss Logging Adapter - Redux</description>
   <scm>
     <connection>scm:svn:https://svn.jboss.org/repos/common/slf4j-jboss-logging/tags/1.0.2.GA</connection>
   </scm>
