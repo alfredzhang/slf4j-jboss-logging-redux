@@ -13,18 +13,13 @@
   <url>http://www.jboss.org</url>
   <description>SLF4J to JBoss Logging Adapter - Redux</description>
   <scm>
-    <connection>scm:svn:https://svn.jboss.org/repos/common/slf4j-jboss-logging/tags/1.0.2.GA</connection>
+    <connection>scm:git:git@github.com:dwijnand/slf4j-jboss-logging-redux.git</connection>
+    <developerConnection>scm:git:git@github.com:dwijnand/slf4j-jboss-logging-redux.git</developerConnection>
+    <url>https://github.com/dwijnand/slf4j-jboss-logging-redux</url>
+    <tag>HEAD</tag>
   </scm>
   <build>
     <plugins>
-      <plugin>
-        <artifactId>maven-release-plugin</artifactId>
-        <configuration>
-          <!-- The tagBase property is needed during the release process so that the maven release plugin
-            will create the release tag in the appropriate location. -->
-          <tagBase>https://svn.jboss.org/repos/common/slf4j-jboss-logging/tags</tagBase>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>jboss.maven-plugins</groupId>
         <artifactId>jboss-deploy-maven-plugin</artifactId>
